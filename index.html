@@ -3,65 +3,90 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>МАСТЕРСКАЯ ИДЕЙ — 3D печать, журналы, игрушки и товары из Китая</title>
+<title>ФАНТАЗИЯ — 3D печать, журналы, игрушки и товары из Китая</title>
 <meta name="description" content="Мастерская идей: 3D печать на заказ, персональные журналы к праздникам, игрушки и товары из Китая.">
 <style>
-:root{--bg:#fffaf6;--card:#fff;--ink:#2a2b30;--mut:#6b6f76;--a:#f26f1f;--a2:#d95a0c;--line:#f0e2d4;--r:18px;color-scheme:light;
-box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-*{box-sizing:border-box}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:20}
-.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:8px 0}
-.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);margin-right:auto}
-.brand img{height:58px;width:auto;mix-blend-mode:multiply}
-.brand b{font-size:26px;font-weight:900;letter-spacing:1px}.brand b i{color:var(--a);font-style:normal}
-nav{display:flex;gap:4px;overflow-x:auto;white-space:nowrap;max-width:100%}
-nav a{color:var(--mut);text-decoration:none;padding:7px 12px;border-radius:10px;font-size:15px}
-nav a.on{background:var(--a);color:#fff}
-.btn{display:inline-block;background:linear-gradient(90deg,var(--a),var(--a2));color:#fff;border:0;border-radius:14px;padding:13px 24px;font-family:inherit;font-weight:700;font-size:16px;text-decoration:none;cursor:pointer}
-.btn.s{padding:9px 16px;font-size:14px;border-radius:12px}
-.btn.o{background:#fff;color:var(--ink);border:1px solid var(--line)}
-.btn.g{background:#fff;color:var(--a2);border:1px solid var(--a)}
-.page{display:none;padding-bottom:40px}.page.show{display:block}
-.back{display:inline-block;color:var(--mut);text-decoration:none;margin:18px 0 0}
-.hero{padding:36px 0 22px;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-h1{font-size:clamp(34px,6vw,58px);line-height:1.05;margin:0 0 14px}h1 span{color:var(--a)}
-h2{font-size:clamp(28px,4.5vw,42px);margin:18px 0 8px}
-h3.sec{font-size:24px;margin:30px 0 4px}
-.lead{color:var(--mut);font-size:18px;margin:0 0 20px;max-width:660px}
-.cta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:8px 0 10px}
-.mos{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.mos img{width:100%;aspect-ratio:1.5/1;object-fit:cover;border-radius:14px;border:1px solid var(--line);display:block}
-.tiles{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin:14px 0 30px}
-.tile{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:10px;text-decoration:none;color:var(--ink);transition:transform .15s,border-color .15s}
-.tile:hover{transform:translateY(-3px);border-color:var(--a)}
-.tile img{width:100%;height:110px;object-fit:cover;border-radius:12px;display:block;margin-bottom:8px}
-.tile b{display:block;padding-right:34px}.tile small{display:block;color:var(--mut);font-size:12px;padding-right:34px}
-.tile .go{position:absolute;right:12px;bottom:12px;width:28px;height:28px;border-radius:50%;background:var(--a);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:0 0 8px}
-.step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;font-size:14px;color:var(--mut)}
-.step b{display:flex;align-items:center;gap:8px;color:var(--ink);margin-bottom:4px}
-.step b i{font-style:normal;width:26px;height:26px;border-radius:50%;background:var(--a);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-size:14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-bottom:18px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:6px}
-.card img{width:100%;aspect-ratio:2.6/1;object-fit:cover;border-radius:12px;display:block}
-.card h3{margin:6px 0 0;font-size:18px}.card p{margin:0;color:var(--mut);font-size:14px}
-.row{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-top:auto;padding-top:8px}
-.price{font-weight:800;font-size:19px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}
-.chip{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:9px 18px;font:inherit;font-size:15px;cursor:pointer}
-.chip.on{background:var(--a);border-color:var(--a);color:#fff}
-.wide{width:100%;max-width:520px;border-radius:18px;border:1px solid var(--line);margin:0 0 16px;display:block}
-.note{color:var(--mut);font-size:13px}
-.hl{width:100%;max-width:440px;margin:0 auto;display:block;mix-blend-mode:multiply}
-footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--mut);font-size:13px;text-align:center}
-#sel{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);padding:10px 18px calc(10px + env(safe-area-inset-bottom,0px));display:none;z-index:15;box-shadow:0 -4px 16px rgba(0,0,0,.08);gap:10px;align-items:center;flex-wrap:wrap}
-#sel.show{display:flex}#sel span{flex:1;min-width:160px;font-size:14px}
-#toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:12px;z-index:30;display:none;max-width:90%;text-align:center;font-size:14px}
-@media(max-width:820px){.hero{grid-template-columns:1fr}.tiles{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr 1fr}.brand b{font-size:22px}}
+:root {
+  --bg: #f4f6fb;
+  --card: #fff;
+  --ink: #1a1a1a;
+  --mut: #6b7280;
+  --a: #6b4eff;
+  --a2: #5538ff;
+  --line: #e5e7eb;
+  --r: 18px;
+}
+* { box-sizing: border-box; }
+html { scroll-padding-top: env(safe-area-inset-top,0px); }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 18px; }
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: #fff; border-bottom: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+.bar { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 0; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); margin-right: auto; font-weight: 900; font-size: 28px; letter-spacing: 1px;}
+.brand img { height: 40px; width: auto; border-radius: 8px; }
+.brand b i { color: var(--a); font-style: normal; }
+nav { display: flex; gap: 4px; overflow-x: auto; white-space: nowrap; max-width: 100%; }
+nav a { color: var(--mut); text-decoration: none; padding: 8px 14px; border-radius: 10px; font-size: 15px; font-weight: 500;}
+nav a.on { background: var(--a); color: #fff; }
+.btn { display: inline-block; background: var(--a); color: #fff; border: 0; border-radius: 12px; padding: 12px 24px; font-family: inherit; font-weight: 600; font-size: 16px; text-decoration: none; cursor: pointer; transition: 0.2s;}
+.btn:hover { background: var(--a2); }
+.btn.s { padding: 9px 16px; font-size: 14px; }
+.btn.o { background: #fff; color: var(--a); border: 1px solid var(--a); }
+.btn.o:hover { background: var(--bg); }
+.back { display: inline-block; color: var(--mut); text-decoration: none; margin: 18px 0 0; }
+.hero { padding: 40px 0 22px; display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: center; }
+h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.1; margin: 0 0 14px; font-weight: 900;}
+h1 span { color: var(--a); }
+h2 { font-size: clamp(28px, 4.5vw, 42px); margin: 18px 0 8px; font-weight: 800; }
+h3.sec { font-size: 24px; margin: 30px 0 16px; font-weight: 700;}
+.lead { color: var(--mut); font-size: 18px; margin: 0 0 20px; max-width: 660px; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 8px 0 10px; }
+.tiles { display: grid; grid-template-columns: repeat(6,1fr); gap: 16px; margin: 14px 0 30px; }
+.tile { position: relative; background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; text-decoration: none; color: var(--ink); transition: transform .2s, box-shadow .2s; box-shadow: 0 4px 6px rgba(0,0,0,0.02);}
+.tile:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.05); }
+.tile img { width: 100%; height: 120px; object-fit: cover; border-radius: 12px; display: block; margin-bottom: 12px; }
+.tile b { display: block; font-size: 16px; padding-right: 20px; margin-bottom: 4px; }
+.tile small { display: block; color: var(--mut); font-size: 12px; }
+.steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin: 0 0 24px; }
+.step { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 16px; font-size: 14px; color: var(--mut); box-shadow: 0 2px 4px rgba(0,0,0,0.02);}
+.step b { display: flex; align-items: center; gap: 8px; color: var(--ink); margin-bottom: 8px; font-size: 16px;}
+.step b i { font-style: normal; width: 28px; height: 28px; border-radius: 50%; background: var(--a); color: #fff; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; margin-bottom: 24px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+.card img { width: 100%; aspect-ratio: 2/1; object-fit: cover; border-radius: 12px; display: block; }
+.card h3 { margin: 4px 0 0; font-size: 18px; font-weight: 700;}
+.card p { margin: 0; color: var(--mut); font-size: 14px; }
+.row { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: auto; padding-top: 12px; }
+.price { font-weight: 800; font-size: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 20px; }
+.chip { background: #fff; color: var(--ink); border: 1px solid var(--line); border-radius: 999px; padding: 10px 20px; font: inherit; font-size: 15px; cursor: pointer; transition: 0.2s;}
+.chip:hover { border-color: var(--a); color: var(--a); }
+.chip.on { background: var(--a); border-color: var(--a); color: #fff; }
+.wide { width: 100%; max-width: 520px; border-radius: 18px; border: 1px solid var(--line); margin: 0 0 20px; display: block; }
+.note { color: var(--mut); font-size: 13px; margin-top: 10px;}
+.hl { width: 100%; max-width: 440px; margin: 0 auto; display: block; mix-blend-mode: multiply; }
+footer { border-top: 1px solid var(--line); padding: 24px 0; color: var(--mut); font-size: 14px; text-align: center; background: #fff;}
+#sel { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 1px solid var(--line); padding: 12px 18px calc(12px + env(safe-area-inset-bottom,0px)); display: none; z-index: 15; box-shadow: 0 -4px 16px rgba(0,0,0,.08); gap: 12px; align-items: center; flex-wrap: wrap; }
+#sel.show { display: flex; } #sel span { flex: 1; min-width: 160px; font-size: 15px; font-weight: 600;}
+#toast { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); background: var(--ink); color: #fff; padding: 12px 24px; border-radius: 12px; z-index: 30; display: none; max-width: 90%; text-align: center; font-size: 15px; }
+.card .chip { border: 1px solid var(--a); color: var(--a); background: transparent; padding: 8px 20px; border-radius: 20px; font-weight: 600; cursor: pointer; transition: 0.2s;}
+.card .chip:hover { background: var(--a); color: #fff;}
+.card .chip.on { background: var(--a); color: #fff; border-color: var(--a);}
+@media(max-width: 820px) {
+  .hero { grid-template-columns: 1fr; }
+  .tiles { grid-template-columns: repeat(2,1fr); }
+  .steps { grid-template-columns: 1fr 1fr; }
+}
 </style>
 </head>
 <body>
@@ -71,95 +96,147 @@ footer{border-top:1px solid var(--line);padding:20px 0 28px;color:var(--mut);fon
 </div></header>
 <main class="wrap" id="main"></main>
 <footer>© 2026 Мастерская идей</footer>
-<div id="sel"><span id="seltxt"></span><button class="btn" id="selmax" data-ch="max">Заказать в MAX</button><button class="btn s g" id="seltg" data-ch="tg">Telegram</button></div>
+<div id="sel"><span id="seltxt"></span><button class="btn" id="selmax" data-ch="max">Заказать в MAX</button><button class="btn s o" id="seltg" data-ch="tg">Telegram</button></div>
 <div id="toast"></div>
 <script>
 var MX2="https://max.ru/u/f9LHodD0cOIiid9AarEW4gHfWifJy7klQfkkWqZHYuVC84GiaWZ8ZebFb7U";
 var TG="https://t.me/yuriy100772",MX="https://max.ru/u/f9LHodD0cOLSRnQBS8hQAfgowqn67cYwxynI1MWr8yv5xXbNU2ToWYbzls0";
-var IMG={
-logo: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400",
-logofull: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=600",
-wolf: "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400",
-keyname: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?w=400",
-astro: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=400",
-stand: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400",
-organ: "https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=400",
-keyhold: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?w=400",
-house: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400",
-vase: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400",
-kashpo: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400",
-penal: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=400",
-dragon: "https://images.unsplash.com/photo-1577702312706-e23ff063064f?w=400",
-cup: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400",
-bday: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400",
-jubilee: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400",
-wedding: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400",
-ny: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=400",
-teacher: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400",
-feb23: "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=400",
-mar8: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400",
-m_family: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400",
-m_biz: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
-m_trip: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400",
-m_gift: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400",
-m_hobby: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400",
-m_dino: "https://images.unsplash.com/photo-1525876183281-0d0d9308010d?w=400",
-m_space: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400",
-m_hero: "https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=400",
-m_sport: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400",
-m_adv: "https://images.unsplash.com/photo-1533692328991-08159ff19fca?w=400",
-m_mine: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400",
-m_animals: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=400",
-song: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
-bot: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400",
-tsite: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=400",
-tchina: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400",
-tsong: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400",
-tbot: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400"
+
+var IMG = {
+  logo: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=100",
+  logofull: "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=600",
+  // Товары
+  wolf: "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=400",
+  keyname: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?w=400",
+  astro: "https://images.unsplash.com/photo-1614728263952-84ea256f9679?w=400",
+  stand: "https://images.unsplash.com/photo-1589492477829-5e65395b66cc?w=400",
+  organ: "https://images.unsplash.com/photo-1591129841117-3adfd313e34f?w=400",
+  keyhold: "https://images.unsplash.com/photo-1583324113626-70df0f4deaab?w=400",
+  house: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?w=400",
+  vase: "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=400",
+  kashpo: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?w=400",
+  penal: "https://images.unsplash.com/photo-1544816155-12df9643f363?w=400",
+  dragon: "https://images.unsplash.com/photo-1577702312706-e23ff063064f?w=400",
+  cup: "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=400",
+  // Журналы
+  bday: "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400",
+  jubilee: "https://images.unsplash.com/photo-1513151233558-d860c5398176?w=400",
+  wedding: "https://images.unsplash.com/photo-1519741497674-611481863552?w=400",
+  ny: "https://images.unsplash.com/photo-1543589077-47d81606c1bf?w=400",
+  teacher: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=400",
+  feb23: "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=400",
+  mar8: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=400",
+  m_family: "https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400",
+  m_biz: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400",
+  m_trip: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400",
+  m_gift: "https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=400",
+  m_hobby: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?w=400",
+  // Детям
+  m_dino: "https://images.unsplash.com/photo-1525876183281-0d0d9308010d?w=400",
+  m_space: "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=400",
+  m_hero: "https://images.unsplash.com/photo-1608889175123-8ee362201f81?w=400",
+  m_sport: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=400",
+  m_adv: "https://images.unsplash.com/photo-1533692328991-08159ff19fca?w=400",
+  m_mine: "https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=400",
+  m_animals: "https://images.unsplash.com/photo-1534567153574-2b12153a87f0?w=400",
+  // Разное
+  song: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400",
+  bot: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400",
+  tsite: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=400",
+  tchina: "https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=400",
+  tsong: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400",
+  tbot: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400"
 };
+
 var TOYS=[["Брелок Волк","Сувениры",500,"wolf","Подарки"],["Брелок с именем","Подарки",600,"keyname","Подарки"],["Астронавт","Подарки",800,"astro","Подарки"],["Подставка под телефон","Для дома и офиса",700,"stand","Дом и офис"],["Органайзер для мелочей","Для дома и офиса",1300,"organ","Дом и офис"],["Ключница","Для дома",1200,"keyhold","Дом и офис"],["Домик-светильник","Интерьер",1500,"house","Дом и офис"],["Ваза для цветов","Для дома",1000,"vase","Дом и офис"],["Кашпо","Для дома и сада",900,"kashpo","Дом и офис"],["Пенал-органайзер","Для школьника",1200,"penal","Детям"],["Дракон подвижный","Игрушки",900,"dragon","Детям"],["Стакан для карандашей","Для школьника",700,"cup","Детям"]];
-var JG=[["К празднику",[["День рождения","bday"],["Юбилей","jubilee"],["Свадьба","wedding"],["Новый год","ny"],["День учителя","teacher"],["23 февраля","feb23"],["8 марта","mar8"]]],["Семейные",[["Семейная история","m_family"]]],["Для дела и увлечений",[["Деловые и офисные","m_biz"],["Путешествия","m_trip"],["Подарки","m_gift"],["Хобби и увлечения","m_hobby"]]],["Детям",[["Динозавры","m_dino"],["Космос","m_space"],["Супергерои","m_hero"],["Спорт","m_sport"],["Приключения","m_adv"],["Майнкрафт","m_mine"],["Животные","m_animals"]]]];
+var JG=[["К празднику",[["День рождения","bday"],["Юбилей","jubilee"],["Свадьба","wedding"],["Новый год","ny"],["День учителя","teacher"],["23 февраля","feb23"],["8 марта","mar8"]]],["Семейные",[["Семейная история","m_family"]]],["Взрослым",[["Деловые и офисные","m_biz"],["Путешествия","m_trip"],["Подарки","m_gift"],["Хобби и увлечения","m_hobby"]]],["Детям",[["Динозавры","m_dino"],["Космос","m_space"],["Супергерои","m_hero"],["Спорт","m_sport"],["Приключения","m_adv"],["Майнкрафт","m_mine"],["Животные","m_animals"]]]];
 var SOON={songs:["Песни и видео с ИИ","Создаём песни, клипы и истории для вас, вашей семьи или ребёнка. Любой стиль и сюжет.","song",["Детские песни","Рэп","Поп","Рок","Сказки","Поздравления"],"Хочу песню или видео с ИИ"],bots:["ИИ-боты и помощники","Умные боты для консультаций, игр, обучения и поддержки. Настроим под ваш бизнес или семью.","bot",["Бот для детей","Бот для бизнеса","Голосовой бот","Бот-консультант","Игровой бот","Бот для магазина"],"Хочу ИИ-бота"],sites:["Сайты","Лендинг, визитка, магазин или портфолио. Быстрый запуск, удобно с телефона и компьютера.","tsite",null,"Хочу заказать сайт"],china:["Товары из Китая","Подберём товары у проверенных поставщиков, посчитаем цену и организуем доставку.","tchina",null,"Хочу заказать товар из Китая"]};
 var CAT="Все",SEL=[],SC=[],CUR="home";
+
 function $(i){return document.getElementById(i)}
-function pair(msg,label){return '<button class="btn" data-ch="max" data-order="'+msg+'">'+label+'</button><button class="btn s g" data-ch="tg" data-order="'+msg+'">Telegram</button>'}
+function pair(msg,label){return '<button class="btn" data-ch="max" data-order="'+msg+'">'+label+'</button><button class="btn s o" data-ch="tg" data-order="'+msg+'">Telegram</button>'}
 function fmt(n){return n.toLocaleString("ru-RU")+" ₽"}
 function toast(t){var e=$("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(function(){e.style.display="none"},4500)}
 function order(msg,ch){
-if(ch==="max"||ch==="max2"){try{navigator.clipboard.writeText(msg).then(function(){toast("Текст заявки скопирован. Вставьте его в чат MAX.")},function(){toast("Откройте чат MAX и напишите заявку своими словами.")})}catch(e){toast("Откройте чат MAX и напишите заявку своими словами.")}window.open(ch==="max2"?MX2:MX,"_blank","noopener")}
-else window.open(TG+"?text="+encodeURIComponent(msg),"_blank","noopener")}
+  if(ch==="max"||ch==="max2"){
+    try{navigator.clipboard.writeText(msg).then(function(){toast("Текст заявки скопирован. Вставьте его в чат MAX.")},function(){toast("Откройте чат MAX и напишите заявку своими словами.")})}catch(e){toast("Откройте чат MAX и напишите заявку своими словами.")}
+    window.open(ch==="max2"?MX2:MX,"_blank","noopener")
+  } else {
+    window.open(TG+"?text="+encodeURIComponent(msg),"_blank","noopener")
+  }
+}
+
 function home(){
-var T=[["#3d","house","3D печать","На заказ по фото и эскизу"],["#mags","bday","Журналы","К праздникам и событиям"],["#songs","tsong","Песни и видео","Создаём вместе с ИИ"],["#bots","tbot","Боты и ИИ","Ваш помощник 24/7"],["#sites","tsite","Сайты","Быстрый запуск"],["#china","tchina","Игрушки и товары из Китая","Подбор под заказ"]];
-return '<div class="hero"><div><h1>3D печать <span>на заказ</span></h1><p class="lead">Сделаем по вашему фото, эскизу или образцу: детали, корпуса, подарки, сувениры. А ещё персональные журналы к праздникам.</p><div class="cta">'+pair("Здравствуйте! Хочу заказать 3D печать.","Заказать в MAX")+'<a class="btn o" href="#3d">Смотреть каталог</a></div></div><img class="hl" data-i="logofull" alt="Мастерская идей"></div><div class="tiles">'+T.map(function(t){return '<a class="tile" href="'+t[0]+'"><img data-i="'+t[1]+'" alt=""><b>'+t[2]+'</b><small>'+t[3]+'</small><span class="go">→</span></a>'}).join("")+'</div>'}
+  var T=[["#3d","house","3D печать","На заказ по фото и эскизу"],["#mags","bday","Журналы","К праздникам и событиям"],["#songs","tsong","Песни и видео","Создаём вместе с ИИ"],["#bots","tbot","Боты и ИИ","Ваш помощник 24/7"],["#sites","tsite","Сайты","Быстрый запуск"],["#china","tchina","Игрушки и товары из Китая","Подбор под заказ"]];
+  return '<div class="hero"><div><h1>3D печать <span>на заказ</span></h1><p class="lead">Сделаем по вашему фото, эскизу или образцу: детали, корпуса, подарки, сувениры. А ещё персональные журналы к праздникам.</p><div class="cta">'+pair("Здравствуйте! Хочу заказать 3D печать.","Заказать")+'<a class="btn o" href="#3d">Смотреть каталог</a></div></div><img class="hl" data-i="logofull" alt="Мастерская идей"></div><div class="tiles">'+T.map(function(t){return '<a class="tile" href="'+t[0]+'"><img data-i="'+t[1]+'" alt=""><b>'+t[2]+'</b><small>'+t[3]+'</small></a>'}).join("")+'</div>'
+}
+
 function p3d(){
-var st=["Пришлите фото, эскиз или размеры","Оценим цену и срок","Напечатаем и проверим","Отправим или передадим"];
-var cs=["Все","Подарки","Дом и офис","Детям"];
-return '<a class="back" href="#home">← На главную</a><h2>3D печать на заказ</h2><p class="lead">Сделаем деталь, корпус, подарок или сувенир по вашему фото, эскизу или образцу. Разные размеры, цвета и материалы.</p><div class="steps">'+st.map(function(s,i){return '<div class="step"><b><i>'+(i+1)+'</i></b>'+s+'</div>'}).join("")+'</div><h3 class="sec">Что можно напечатать:</h3><ul style="list-style:none;padding:0;margin:8px 0 18px;font-size:22px;line-height:1.9"><li>• детали</li><li>• корпуса</li><li>• подставки и держатели</li><li>• подарки с именем или фото</li><li>• сувениры и логотипы</li></ul><div class="cta">'+pair("Хочу заказать 3D печать по своей идее или фото.","Заказать")+'</div><h3 class="sec">Готовые изделия</h3><div class="chips" id="cats">'+cs.map(function(c){return '<button class="chip'+(c===CAT?' on':'')+'" data-cat="'+c+'">'+c+'</button>'}).join("")+'</div><div class="grid" id="toys"></div><p class="note">Цены указаны «от»: точная стоимость зависит от размера и цвета. Индивидуальные заказы считаем после обсуждения.</p>'}
+  var st=["Пришлите фото, эскиз или размеры","Оценим цену и срок","Напечатаем и проверим","Отправим или передадим"];
+  var cs=["Все","Подарки","Дом и офис","Детям"];
+  return '<a class="back" href="#home">← На главную</a><h2>3D печать на заказ</h2><p class="lead">Сделаем деталь, корпус, подарок или сувенир по вашему фото, эскизу или образцу. Разные размеры, цвета и материалы.</p><div class="steps">'+st.map(function(s,i){return '<div class="step"><b><i>'+(i+1)+'</i></b>'+s+'</div>'}).join("")+'</div><h3 class="sec">Что можно напечатать:</h3><ul style="list-style:none;padding:0;margin:8px 0 18px;font-size:20px;line-height:1.8;color:var(--ink)"><li>• детали</li><li>• корпуса</li><li>• подставки и держатели</li><li>• подарки с именем или фото</li><li>• сувениры и логотипы</li></ul><div class="cta">'+pair("Хочу заказать 3D печать по своей идее или фото.","Заказать")+'</div><h3 class="sec">Готовые изделия</h3><div class="chips" id="cats">'+cs.map(function(c){return '<button class="chip'+(c===CAT?' on':'')+'" data-cat="'+c+'">'+c+'</button>'}).join("")+'</div><div class="grid" id="toys"></div><p class="note">Цены указаны «от»: точная стоимость зависит от размера и цвета. Индивидуальные заказы считаем после обсуждения.</p>'
+}
+
 function toys(){
-$("toys").innerHTML=TOYS.filter(function(t){return CAT==="Все"||t[4]===CAT}).map(function(t){return '<div class="card"><img data-i="'+t[3]+'" alt=""><h3>'+t[0]+'</h3><p>'+t[1]+'</p><div class="row"><span class="price">'+fmt(t[2])+'</span><button class="btn s" data-ch="max" data-order="Хочу заказать 3D печать: '+t[0]+'">Заказать</button></div></div>'}).join("");fill()}
+  $("toys").innerHTML=TOYS.filter(function(t){return CAT==="Все"||t[4]===CAT}).map(function(t){return '<div class="card"><img data-i="'+t[3]+'" alt=""><h3>'+t[0]+'</h3><p>'+t[1]+'</p><div class="row"><span class="price">'+fmt(t[2])+'</span><button class="btn s" data-ch="max" data-order="Хочу заказать 3D печать: '+t[0]+'">Заказать</button></div></div>'}).join("");
+  fill();
+}
+
 function mags(){
-return '<a class="back" href="#home">← На главную</a><h2>Персональные журналы на заказ</h2><p class="lead">Журнал к празднику или событию, где героями станут вы и ваши близкие. Отметьте темы, можно несколько, и нажмите «Заказать в MAX». Фотографии для журнала пришлёте в чате.</p>'+JG.map(function(g){return '<h3 class="sec">'+g[0]+'</h3><div class="grid">'+g[1].map(function(t){var on=SEL.indexOf(t[0])>=0;return '<div class="card"><img data-i="'+t[1]+'" alt=""><h3>'+t[0]+'</h3><div class="row"><span></span><button class="chip'+(on?' on':'')+'" data-th="'+t[0]+'">'+(on?'Выбрано ✓':'Выбрать')+'</button></div></div>'}).join("")+'</div>'}).join("")}
+  return '<a class="back" href="#home">← На главную</a><h2>Персональные журналы на заказ</h2><p class="lead">Журнал к празднику или событию, где героями станут вы и ваши близкие. Отметьте темы, можно несколько, и нажмите «Заказать в MAX». Фотографии для журнала пришлёте в чате.</p>'+JG.map(function(g){return '<h3 class="sec">'+g[0]+'</h3><div class="grid">'+g[1].map(function(t){var on=SEL.indexOf(t[0])>=0;return '<div class="card"><img data-i="'+t[1]+'" alt=""><h3>'+t[0]+'</h3><div class="row"><span></span><button class="chip'+(on?' on':'')+'" data-th="'+t[0]+'">'+(on?'Выбрано ✓':'Выбрать')+'</button></div></div>'}).join("")+'</div>'}).join("")
+}
+
 function china(){
-var L=function(m){return '<button class="btn" data-ch="max2" data-order="'+m+'">Узнать наличие в MAX</button>'};
-var st=["Напишите, что вам нужно","Уточним наличие и цену","Согласуем заказ и оплату","Привезём и передадим"];
-return '<a class="back" href="#home">← На главную</a><h2>Игрушки и товары из Китая</h2><p class="lead">Ассортимент меняется: то, что есть сегодня, через неделю может закончиться. Поэтому сначала обсуждаем: напишите, что вам нужно, и мы подберём варианты, назовём цену и срок.</p><img class="wide" data-i="tchina" alt=""><div class="steps">'+st.map(function(x,i){return '<div class="step"><b><i>'+(i+1)+'</i></b>'+x+'</div>'}).join("")+'</div><div class="grid"><div class="card"><h3>Игрушки</h3><p>Конструкторы, радиоуправляемые машинки, мягкие игрушки, наборы для творчества. Что есть сейчас, уточняйте.</p><div class="row"><span></span>'+L("Хочу узнать наличие игрушек из Китая")+'</div></div><div class="card"><h3>Другие товары</h3><p>Подберём товар у проверенных поставщиков, посчитаем цену и организуем доставку.</p><div class="row"><span></span>'+L("Хочу заказать товар из Китая. Что нужно найти:")+'</div></div></div><p class="note">Постоянного каталога и цен нет, всё зависит от наличия.</p>'}
+  var L=function(m){return '<button class="btn" data-ch="max2" data-order="'+m+'">Узнать наличие в MAX</button>'};
+  var st=["Напишите, что вам нужно","Уточним наличие и цену","Согласуем заказ и оплату","Привезём и передадим"];
+  return '<a class="back" href="#home">← На главную</a><h2>Игрушки и товары из Китая</h2><p class="lead">Ассортимент меняется: то, что есть сегодня, через неделю может закончиться. Поэтому сначала обсуждаем: напишите, что вам нужно, и мы подберём варианты, назовём цену и срок.</p><img class="wide" data-i="tchina" alt=""><div class="steps">'+st.map(function(x,i){return '<div class="step"><b><i>'+(i+1)+'</i></b>'+x+'</div>'}).join("")+'</div><div class="grid"><div class="card"><h3>Игрушки</h3><p>Конструкторы, радиоуправляемые машинки, мягкие игрушки, наборы для творчества. Что есть сейчас, уточняйте.</p><div class="row"><span></span>'+L("Хочу узнать наличие игрушек из Китая")+'</div></div><div class="card"><h3>Другие товары</h3><p>Подберём товар у проверенных поставщиков, посчитаем цену и организуем доставку.</p><div class="row"><span></span>'+L("Хочу заказать товар из Китая. Что нужно найти:")+'</div></div></div><p class="note">Постоянного каталога и цен нет, всё зависит от наличия.</p>'
+}
+
 function soon(h){
-var S=SOON[h];SC=[];
-return '<a class="back" href="#home">← На главную</a><h2>'+S[0]+'</h2><p class="lead">'+S[1]+'</p><img class="wide" data-i="'+S[2]+'" alt="">'+(S[3]?'<div class="chips" id="sch">'+S[3].map(function(c){return '<button class="chip" data-sc="'+c+'">'+c+'</button>'}).join("")+'</div>':'<p class="note">Страница скоро будет готова. Пока можно написать и всё обсудить.</p>')+'<div class="cta" id="scta"></div>'}
-function sctaDraw(h){var S=SOON[h];if(!$("scta"))return;$("scta").innerHTML=pair(S[4]+(SC.length?": "+SC.join(", "):""),"Обсудить в MAX")}
-function fill(){[].forEach.call(document.querySelectorAll("img[data-i]"),function(i){i.src=IMG[i.dataset.i]})}
-function selUpd(){var b=$("sel");if(CUR==="mags"&&SEL.length){var m="Хочу персональный журнал: "+SEL.join(", ");$("seltxt").textContent="Выбрано: "+SEL.join(", ");$("selmax").dataset.order=m;$("seltg").dataset.order=m;b.classList.add("show")}else b.classList.remove("show")}
+  var S=SOON[h];SC=[];
+  return '<a class="back" href="#home">← На главную</a><h2>'+S[0]+'</h2><p class="lead">'+S[1]+'</p><img class="wide" data-i="'+S[2]+'" alt="">'+(S[3]?'<div class="chips" id="sch">'+S[3].map(function(c){return '<button class="chip" data-sc="'+c+'">'+c+'</button>'}).join("")+'</div>':'<p class="note">Страница скоро будет готова. Пока можно написать и всё обсудить.</p>')+'<div class="cta" id="scta"></div>'
+}
+
+function sctaDraw(h){
+  var S=SOON[h];if(!$("scta"))return;
+  $("scta").innerHTML=pair(S[4]+(SC.length?": "+SC.join(", "):""),"Обсудить")
+}
+
+function fill(){
+  [].forEach.call(document.querySelectorAll("img[data-i]"),function(i){i.src=IMG[i.dataset.i]})
+}
+
+function selUpd(){
+  var b=$("sel");
+  if(CUR==="mags"&&SEL.length){
+    var m="Хочу персональный журнал: "+SEL.join(", ");
+    $("seltxt").textContent="Выбрано: "+SEL.join(", ");
+    $("selmax").dataset.order=m;$("seltg").dataset.order=m;b.classList.add("show")
+  } else {
+    b.classList.remove("show")
+  }
+}
+
 function route(){
-var h=(location.hash||"#home").slice(1);if(h!=="home"&&h!=="3d"&&h!=="mags"&&!SOON[h])h="home";CUR=h;
-$("main").innerHTML=h==="home"?home():h==="3d"?p3d():h==="mags"?mags():h==="china"?china():soon(h);
-if(h==="3d")toys();if(SOON[h])sctaDraw(h);fill();selUpd();
-[].forEach.call(document.querySelectorAll("#nav a"),function(a){a.classList.toggle("on",a.dataset.p===h)});window.scrollTo(0,0)}
+  var h=(location.hash||"#home").slice(1);
+  if(h!=="home"&&h!=="3d"&&h!=="mags"&&!SOON[h])h="home";
+  CUR=h;
+  $("main").innerHTML=h==="home"?home():h==="3d"?p3d():h==="mags"?mags():h==="china"?china():soon(h);
+  if(h==="3d")toys();
+  if(SOON[h])sctaDraw(h);
+  fill();selUpd();
+  [].forEach.call(document.querySelectorAll("#nav a"),function(a){a.classList.toggle("on",a.dataset.p===h)});
+  window.scrollTo(0,0)
+}
+
 document.addEventListener("click",function(e){
-var t=e.target.closest("button,a");if(!t)return;
-if(t.dataset.order){order(t.dataset.order,t.dataset.ch);return}
-if(t.dataset.cat){CAT=t.dataset.cat;[].forEach.call($("cats").children,function(c){c.classList.toggle("on",c===t)});toys();return}
-if(t.dataset.th){var n=t.dataset.th,i=SEL.indexOf(n);if(i>=0)SEL.splice(i,1);else SEL.push(n);var on=SEL.indexOf(n)>=0;t.classList.toggle("on",on);t.textContent=on?"Выбрано ✓":"Выбрать";selUpd();return}
-if(t.dataset.sc){var j=SC.indexOf(t.dataset.sc);if(j>=0)SC.splice(j,1);else SC.push(t.dataset.sc);t.classList.toggle("on");sctaDraw(CUR)}});
+  var t=e.target.closest("button,a");if(!t)return;
+  if(t.dataset.order){order(t.dataset.order,t.dataset.ch);return}
+  if(t.dataset.cat){CAT=t.dataset.cat;[].forEach.call($("cats").children,function(c){c.classList.toggle("on",c===t)});toys();return}
+  if(t.dataset.th){var n=t.dataset.th,i=SEL.indexOf(n);if(i>=0)SEL.splice(i,1);else SEL.push(n);var on=SEL.indexOf(n)>=0;t.classList.toggle("on",on);t.textContent=on?"Выбрано ✓":"Выбрать";selUpd();return}
+  if(t.dataset.sc){var j=SC.indexOf(t.dataset.sc);if(j>=0)SC.splice(j,1);else SC.push(t.dataset.sc);t.classList.toggle("on");sctaDraw(CUR)}
+});
+
 window.addEventListener("hashchange",route);
 $("selmax").dataset.order="";$("seltg").dataset.order="";fill();route();
 </script>
