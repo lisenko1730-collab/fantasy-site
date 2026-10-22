@@ -88,8 +88,8 @@ function pair(msg,label){return '<button class="btn" data-ch="max" data-order="'
 function fmt(n){return n.toLocaleString("ru-RU")+" ₽"}
 function toast(t){var e=$("toast");e.textContent=t;e.style.display="block";clearTimeout(toast.t);toast.t=setTimeout(function(){e.style.display="none"},4500)}
 function order(msg,ch){
-var name=(ch==="tg")?"бот Telegram":"чат MAX";
-try{navigator.clipboard.writeText(msg).then(function(){toast("Текст заявки скопирован. Вставьте его в "+name+".")},function(){toast("Откройте "+name+" и напишите заявку своими словами.")})}catch(e){toast("Откройте "+name+" и напишите заявку своими словами.")}
+var name=(ch==="tg")?"бот Telegram":"чат MAX";var wait=(ch==="tg")?" Бот отвечает с задержкой до 5–10 минут, это нормально.":"";
+try{navigator.clipboard.writeText(msg).then(function(){toast("Текст заявки скопирован. Вставьте его в "+name+"."+wait)},function(){toast("Откройте "+name+" и напишите заявку своими словами.")})}catch(e){toast("Откройте "+name+" и напишите заявку своими словами.")}
 window.open(ch==="max2"?MX2:(ch==="tg"?TG:MX),"_blank","noopener")}
 function home(){
 var T=[["#3d","house","3D печать","На заказ по фото и эскизу"],["#mags","bday","Журналы","К праздникам и событиям"],["#songs","tsong","Песни и видео","Создаём вместе с ИИ"],["#bots","tbot","Боты и ИИ","Ваш помощник 24/7"],["#sites","tsite","Сайты","Быстрый запуск"],["#china","tchina","Игрушки и товары из Китая","Подбор под заказ"]];
